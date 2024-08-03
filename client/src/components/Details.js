@@ -20,7 +20,7 @@ const Details = () => {
     const getdata = async()=>{
         // e.preventdefault();
         // const {name,email,age,work,address,desc,mobile} = inpval;  
-        const res = await axios.get(`http://localhost:8003/getuser/${id}`)
+        const res = await axios.get(`https://crud-application-backend-gqub.onrender.com/getuser/${id}`)
         // const data = await res.json();
         console.log(res.data);
     
@@ -38,7 +38,7 @@ const Details = () => {
         },[])
         const deleteuser = async (id) => {
             try {
-              const res = await axios.delete(`http://localhost:8003/deleteuser/${id}`, {
+              const res = await axios.delete(`https://crud-application-backend-gqub.onrender.com/deleteuser/${id}`, {
                 headers: {
                   "Content-Type": "application/json"
                 }

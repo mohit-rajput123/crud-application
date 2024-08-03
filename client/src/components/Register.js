@@ -26,7 +26,7 @@ const Register = () => {
     const addinpdata = async(e)=>{
       // e.preventdefault();
       const {name,email,age,work,address,desc,mobile} = inpval;
-      const res = await fetch('http://localhost:8003/Register',{
+      const res = await fetch('https://crud-application-backend-gqub.onrender.com/Register',{
         method:"POST",
         headers:{
           "Content-type": "application/json"

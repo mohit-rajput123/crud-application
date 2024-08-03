@@ -31,7 +31,7 @@ const Edit = () => {
     const getdata = async()=>{
         // e.preventdefault();
         // const {name,email,age,work,address,desc,mobile} = inpval;  
-        const res = await axios.get(`http://localhost:8003/getuser/${id}`)
+        const res = await axios.get(`https://crud-application-backend-gqub.onrender.com/getuser/${id}`)
         // const data = await res.json();
         console.log(res.data);
     
@@ -52,7 +52,7 @@ const Edit = () => {
           e.preventDefault();
           const {name,email,work,address,mobile,desc,age} = inpval;
           try {
-            const res2 = await fetch(`http://localhost:8003/updateuser/${id}`, {
+            const res2 = await fetch(`https://crud-application-backend-gqub.onrender.com/updateuser/${id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
